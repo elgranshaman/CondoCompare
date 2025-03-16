@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CondoCompare</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Condo Compare</h1>
+        <p class="app-slogan">Find your perfect home, one comparison at a time</p>
+        <div id="propertyForms">
+            <form id="propertyForm" class="property-form">
+                <div class="form-section">
+                    <h2>Basic Information</h2>
+                    <p class="section-description">Enter the essential details about the property. This information will help you compare properties side by side.</p>
+                    <div class="form-group">
+                        <label for="name">Property Name:</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="location">Location:</label>
+                        <input type="text" id="location" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="size">Size (sqm):</label>
+                        <input type="number" id="size" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="price">Price:</label>
+                        <input type="number" id="price" required>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h2>Property Evaluation</h2>
+                    <p class="section-description">Rate your overall impression and list the key factors that stood out during your viewing. Be specific about what you liked and disliked.</p>
+                    <div class="form-group">
+                        <label for="gutFeeling">Overall Gut Feeling (1-5):</label>
+                        <p class="field-description">1 = Not interested, 5 = Very interested. Consider your immediate emotional response to the property.</p>
+                        <input type="number" id="gutFeeling" min="1" max="5" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Top 3 Things You Liked:</label>
+                        <input type="text" class="like" placeholder="Like 1" required>
+                        <input type="text" class="like" placeholder="Like 2" required>
+                        <input type="text" class="like" placeholder="Like 3" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Top 3 Things You Disliked:</label>
+                        <input type="text" class="dislike" placeholder="Dislike 1" required>
+                        <input type="text" class="dislike" placeholder="Dislike 2" required>
+                        <input type="text" class="dislike" placeholder="Dislike 3" required>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h2>Key Amenities</h2>
+                    <p class="section-description">Rate each amenity based on its condition, functionality, and overall appeal. Consider both the quality and practicality of each feature.</p>
+                    <div class="amenities-grid">
+                        <div class="form-group">
+                            <label for="kitchen">Kitchen Functionality:</label>
+                            <p class="field-description">Consider layout, storage, appliances, and overall usability.</p>
+                            <div class="rating-dots">
+                                <input type="radio" id="kitchen1" name="kitchen" value="1" required>
+                                <label for="kitchen1">1</label>
+                                <input type="radio" id="kitchen2" name="kitchen" value="2">
+                                <label for="kitchen2">2</label>
+                                <input type="radio" id="kitchen3" name="kitchen" value="3">
+                                <label for="kitchen3">3</label>
+                                <input type="radio" id="kitchen4" name="kitchen" value="4">
+                                <label for="kitchen4">4</label>
+                                <input type="radio" id="kitchen5" name="kitchen" value="5">
+                                <label for="kitchen5">5</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="bathroom">Bathroom:</label>
+                            <p class="field-description">Evaluate cleanliness, fixtures, water pressure, and ventilation.</p>
+                            <div class="rating-dots">
+                                <input type="radio" id="bathroom1" name="bathroom" value="1" required>
+                                <label for="bathroom1">1</label>
+                                <input type="radio" id="bathroom2" name="bathroom" value="2">
+                                <label for="bathroom2">2</label>
+                                <input type="radio" id="bathroom3" name="bathroom" value="3">
+                                <label for="bathroom3">3</label>
+                                <input type="radio" id="bathroom4" name="bathroom" value="4">
+                                <label for="bathroom4">4</label>
+                                <input type="radio" id="bathroom5" name="bathroom" value="5">
+                                <label for="bathroom5">5</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="bedroom">Bedroom(s):</label>
+                            <p class="field-description">Assess size, layout, natural light, and storage options.</p>
+                            <div class="rating-dots">
+                                <input type="radio" id="bedroom1" name="bedroom" value="1" required>
+                                <label for="bedroom1">1</label>
+                                <input type="radio" id="bedroom2" name="bedroom" value="2">
+                                <label for="bedroom2">2</label>
+                                <input type="radio" id="bedroom3" name="bedroom" value="3">
+                                <label for="bedroom3">3</label>
+                                <input type="radio" id="bedroom4" name="bedroom" value="4">
+                                <label for="bedroom4">4</label>
+                                <input type="radio" id="bedroom5" name="bedroom" value="5">
+                                <label for="bedroom5">5</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="storage">Storage Space:</label>
+                            <p class="field-description">Consider built-in storage, closet space, and potential for additional storage solutions.</p>
+                            <div class="rating-dots">
+                                <input type="radio" id="storage1" name="storage" value="1" required>
+                                <label for="storage1">1</label>
+                                <input type="radio" id="storage2" name="storage" value="2">
+                                <label for="storage2">2</label>
+                                <input type="radio" id="storage3" name="storage" value="3">
+                                <label for="storage3">3</label>
+                                <input type="radio" id="storage4" name="storage" value="4">
+                                <label for="storage4">4</label>
+                                <input type="radio" id="storage5" name="storage" value="5">
+                                <label for="storage5">5</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="balcony">Balcony/Outdoor Space:</label>
+                            <p class="field-description">Evaluate size, privacy, view, and potential for outdoor activities.</p>
+                            <div class="rating-dots">
+                                <input type="radio" id="balcony1" name="balcony" value="1" required>
+                                <label for="balcony1">1</label>
+                                <input type="radio" id="balcony2" name="balcony" value="2">
+                                <label for="balcony2">2</label>
+                                <input type="radio" id="balcony3" name="balcony" value="3">
+                                <label for="balcony3">3</label>
+                                <input type="radio" id="balcony4" name="balcony" value="4">
+                                <label for="balcony4">4</label>
+                                <input type="radio" id="balcony5" name="balcony" value="5">
+                                <label for="balcony5">5</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="ac">Air Conditioning:</label>
+                            <p class="field-description">Consider system type, coverage, noise level, and energy efficiency.</p>
+                            <div class="rating-dots">
+                                <input type="radio" id="ac1" name="ac" value="1" required>
+                                <label for="ac1">1</label>
+                                <input type="radio" id="ac2" name="ac" value="2">
+                                <label for="ac2">2</label>
+                                <input type="radio" id="ac3" name="ac" value="3">
+                                <label for="ac3">3</label>
+                                <input type="radio" id="ac4" name="ac" value="4">
+                                <label for="ac4">4</label>
+                                <input type="radio" id="ac5" name="ac" value="5">
+                                <label for="ac5">5</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h2>Building & Location Notes</h2>
+                    <p class="section-description">Evaluate the building's overall condition and its surroundings. These factors can significantly impact your daily living experience.</p>
+                    <div class="form-group">
+                        <label for="noise">Noise Levels:</label>
+                        <p class="field-description">Consider both internal (neighbors, building systems) and external (traffic, construction) noise sources.</p>
+                        <div class="rating-dots">
+                            <input type="radio" id="noise1" name="noise" value="1" required>
+                            <label for="noise1">1</label>
+                            <input type="radio" id="noise2" name="noise" value="2">
+                            <label for="noise2">2</label>
+                            <input type="radio" id="noise3" name="noise" value="3">
+                            <label for="noise3">3</label>
+                            <input type="radio" id="noise4" name="noise" value="4">
+                            <label for="noise4">4</label>
+                            <input type="radio" id="noise5" name="noise" value="5">
+                            <label for="noise5">5</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="cleanliness">Building Cleanliness:</label>
+                        <p class="field-description">Evaluate common areas, hallways, and overall building maintenance.</p>
+                        <div class="rating-dots">
+                            <input type="radio" id="cleanliness1" name="cleanliness" value="1" required>
+                            <label for="cleanliness1">1</label>
+                            <input type="radio" id="cleanliness2" name="cleanliness" value="2">
+                            <label for="cleanliness2">2</label>
+                            <input type="radio" id="cleanliness3" name="cleanliness" value="3">
+                            <label for="cleanliness3">3</label>
+                            <input type="radio" id="cleanliness4" name="cleanliness" value="4">
+                            <label for="cleanliness4">4</label>
+                            <input type="radio" id="cleanliness5" name="cleanliness" value="5">
+                            <label for="cleanliness5">5</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="transportation">Transportation Access:</label>
+                        <p class="field-description">Consider proximity to public transit, major roads, and parking availability.</p>
+                        <div class="rating-dots">
+                            <input type="radio" id="transportation1" name="transportation" value="1" required>
+                            <label for="transportation1">1</label>
+                            <input type="radio" id="transportation2" name="transportation" value="2">
+                            <label for="transportation2">2</label>
+                            <input type="radio" id="transportation3" name="transportation" value="3">
+                            <label for="transportation3">3</label>
+                            <input type="radio" id="transportation4" name="transportation" value="4">
+                            <label for="transportation4">4</label>
+                            <input type="radio" id="transportation5" name="transportation" value="5">
+                            <label for="transportation5">5</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="amenities">Nearby Amenities:</label>
+                        <p class="field-description">Evaluate access to shops, restaurants, parks, and other essential services.</p>
+                        <div class="rating-dots">
+                            <input type="radio" id="amenities1" name="amenities" value="1" required>
+                            <label for="amenities1">1</label>
+                            <input type="radio" id="amenities2" name="amenities" value="2">
+                            <label for="amenities2">2</label>
+                            <input type="radio" id="amenities3" name="amenities" value="3">
+                            <label for="amenities3">3</label>
+                            <input type="radio" id="amenities4" name="amenities" value="4">
+                            <label for="amenities4">4</label>
+                            <input type="radio" id="amenities5" name="amenities" value="5">
+                            <label for="amenities5">5</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="oneWord">One Word to Describe It:</label>
+                        <p class="field-description">Choose a single word that best captures your overall impression of the property.</p>
+                        <input type="text" id="oneWord" required>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h2>Photo</h2>
+                    <p class="section-description">Add a photo of the property. You can take a picture directly with your camera or provide a URL.</p>
+                    <div class="form-group">
+                        <label>Take or Upload Photo:</label>
+                        <div class="photo-input-container">
+                            <input type="file" id="photoCapture" accept="image/*" capture="environment" class="photo-input">
+                            <label for="photoCapture" class="photo-input-label">
+                                <span class="camera-icon">📷</span>
+                                <span>Take Photo or Choose File</span>
+                            </label>
+                        </div>
+                        <div id="photoPreview" class="photo-preview">
+                            <img id="previewImage" src="" alt="Preview" style="display: none;">
+                            <p id="noPhotoSelected">No photo selected</p>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="photoUrl">Or Enter Photo URL:</label>
+                        <input type="url" id="photoUrl" placeholder="https://example.com/image.jpg">
+                        <p class="field-description">The camera option is recommended on mobile devices.</p>
+                    </div>
+                </div>
+
+                <div class="form-section" id="aiSettings">
+                    <h2>AI-Powered Summaries</h2>
+                    <p class="section-description">Optionally provide your OpenAI API key to generate concise property summaries after recording.</p>
+                    <div class="form-group">
+                        <label for="apiKey">OpenAI API Key:</label>
+                        <input type="password" id="apiKey" placeholder="sk-...">
+                        <p class="field-description">Your API key is stored locally in your browser and never sent to our servers.</p>
+                    </div>
+                    <div class="form-group">
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="generateSummaries" checked>
+                            <span class="toggle-slider"></span>
+                            <span class="toggle-label">Generate AI summaries automatically (uses API credits)</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="button-group">
+                    <button type="submit" class="btn record">Record Property</button>
+                    <button type="button" class="btn summarize">CondoCompare!</button>
+                </div>
+            </form>
+        </div>
+
+        <div id="propertyList" class="property-list">
+            <!-- Recorded properties will be displayed here -->
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
