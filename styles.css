@@ -53,6 +53,25 @@ h1 {
     font-style: italic;
 }
 
+/* Reset button container */
+.reset-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.reset {
+    background-color: #95a5a6; /* Gray color to indicate caution */
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.reset:hover {
+    background-color: #7f8c8d;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
 .form-section {
     background: var(--background-white);
     border-radius: var(--border-radius);

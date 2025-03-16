@@ -12,10 +12,38 @@ const photoPreview = document.getElementById('photoPreview');
 const previewImage = document.getElementById('previewImage');
 const noPhotoText = document.getElementById('noPhotoSelected');
 const photoUrlInput = document.getElementById('photoUrl');
+const resetButton = document.getElementById('resetButton');
 
 // Add event listener for the CondoCompare button
 summarizeBtn.addEventListener('click', function() {
     generateComparisonResults();
+});
+
+// Add event listener for the Reset button
+resetButton.addEventListener('click', function() {
+    if (confirm('Are you sure you want to start from beginning? This will delete all your recorded properties and cannot be undone.')) {
+        // Clear properties array
+        properties = [];
+        
+        // Clear localStorage data
+        localStorage.removeItem('properties');
+        
+        // Keep API key if it exists
+        const apiKey = localStorage.getItem('apiKey');
+        const generateSummaries = localStorage.getItem('generateSummaries');
+        
+        // Clear comparison results if they exist
+        const comparisonResults = document.getElementById('comparisonResults');
+        if (comparisonResults) {
+            comparisonResults.remove();
+        }
+        
+        // Update the UI
+        displayProperties();
+        
+        // Show confirmation to user
+        alert('All property data has been cleared. You can now start fresh!');
+    }
 });
 
 // Initialize from localStorage
